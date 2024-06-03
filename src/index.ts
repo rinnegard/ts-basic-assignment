@@ -78,7 +78,30 @@ function runExerciseSeven() {
   
 }
 
-function runExerciseEight() {}
+function runExerciseEight() {
+  let grade: string = readLine("Enter your grade: ").toUpperCase();
+  
+  switch (grade) {
+    case "A":
+      console.log(`You got an ${grade}! Congratulations`);
+      break;
+    case "B":
+      console.log(`You got a ${grade}! :)`);
+      break;
+    case "C":
+      console.log(`You got a ${grade}! :|`);
+      break;
+    case "D":
+      console.log(`You got a ${grade}! :(`);
+      break;
+    case "E":
+      console.log(`You got an ${grade}! :'(`);
+      break;
+    default:
+      console.log(chalk.red("You didn't get a grade!"));
+      break;
+  }
+}
 
 function runExerciseNine() {}
 
