@@ -21,7 +21,19 @@ function runExerciseTwo() {
   console.log(`Hello ${firstName} ${lastName}! Have a nice day!`);
 }
 
-function runExerciseThree() {}
+function runExerciseThree() {
+  let num1 = 20;
+  let num2 = 5;
+
+  let sum: number = num1 + num2;
+  console.log(sum);
+
+  let odd = 3;
+  let even = 8;
+
+  console.log(odd / even);
+  
+}
 
 function runExerciseFour() {}
 
