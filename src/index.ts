@@ -71,7 +71,12 @@ function runExerciseSix() {
   }
 }
 
-function runExerciseSeven() {}
+function runExerciseSeven() {
+  let bodyTempC: number = Number(readLine("Enter your body temp(C): "));
+
+  console.log(bodyTempC > 37 ? "Fever" : "No fever");
+  
+}
 
 function runExerciseEight() {}
 
