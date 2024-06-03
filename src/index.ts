@@ -14,7 +14,12 @@ function runExerciseOne() {
 
 }
 
-function runExerciseTwo() {}
+function runExerciseTwo() {
+  let firstName = readLine("First name: ");
+  let lastName = readLine("Last name: ");
+
+  console.log(`Hello ${firstName} ${lastName}! Have a nice day!`);
+}
 
 function runExerciseThree() {}
 
