@@ -1,5 +1,6 @@
 // *** Ignore the following lines ***
 import chalk from "chalk";
+import { read } from "fs";
 import prompt from "prompt-sync";
 // *** Ignore the above lines ***
 
@@ -35,7 +36,16 @@ function runExerciseThree() {
   
 }
 
-function runExerciseFour() {}
+function runExerciseFour() {
+  let radius = Number(readLine("Enter a radius: "));
+
+  let areaCircle = Math.PI * Math.pow(radius, 2);
+  let areaSphere = 4 * Math.PI * Math.pow(radius, 2);
+
+  console.log(`Radius: ${radius}, Circle Area: ${areaCircle}, Sphere Area: ${areaSphere}`);
+  
+
+}
 
 function runExerciseFive() {}
 
