@@ -47,7 +47,19 @@ function runExerciseFour() {
 
 }
 
-function runExerciseFive() {}
+function runExerciseFive() {
+  console.log("Enter consecutive numbers");
+  
+  let num1: number = Number(readLine("Number 1: "));
+  let num2: number = Number(readLine("Number 2: "));
+
+  if (num1 + 1 === num2 || num2 + 1 === num1) {
+    console.log("Consecutive");
+  } else {
+    console.log("Not consecutive");
+    
+  }
+}
 
 function runExerciseSix() {}
 
