@@ -2,6 +2,7 @@
 import chalk from "chalk";
 import { read } from "fs";
 import prompt from "prompt-sync";
+import { start } from "repl";
 // *** Ignore the above lines ***
 
 // Use the following function to read input from the user:
@@ -154,9 +155,33 @@ function runExerciseTen() {
   //E
   let str3 = "She is the popular singer";
   let midPoint = str3.indexOf("popular");
-  console.log(str3.slice(0, midPoint));
+  let part1 = str3.slice(0, midPoint);
+  let part2 = str3.slice(midPoint, str3.length);
   
+  let updatedStr = part1 + "most " + part2;
+  console.log(updatedStr);
+
+  //F
+  let startString = "A friend is the asset of your life"
+  let friendIndex = startString.indexOf("friend");
   
+  let stringWithFriend = startString.slice(0, friendIndex) + "true " + startString.slice(friendIndex, startString.length)
+
+  let assetIndex = stringWithFriend.indexOf("asset");
+  let finalString = stringWithFriend.slice(0, assetIndex) + "greatest " + stringWithFriend.slice(assetIndex, stringWithFriend.length)
+  console.log(finalString);
+
+  //G
+  let fullStr = "My name is Sebastian Vallin";
+  let index = fullStr.indexOf("Sebastian");
+  let name = fullStr.slice(index, fullStr.length)
+  console.log(name);
+
+  //H
+  let str1 = "Arrays are very common in programming, they look something like: [1,2,3,4,5]"
+  let index2 = str1.indexOf("[");
+  let res = str1.slice(index2, str1.length)
+  console.log(res);
 }
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
