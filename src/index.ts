@@ -244,7 +244,20 @@ function runExerciseThirteen() {
 
     keepGuessing = readLine("Do you want to guess again? (yes/no): ");
   }
+}
 
+function runExerciseFourteen() {
+  let multTable: any = {}; //TODO any -> object?
+  for (let i = 1; i <= 10; i++) {
+    multTable[i] = {};
+    for (let j = 1; j <= 10; j++) {
+      multTable[i][j] = i * j;
+    }
+  }
+
+  // console.log(multTable);
+  
+  console.table(multTable)
 }
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
@@ -296,6 +309,9 @@ while (keepAlive) {
         break;
       case 13:
         runExerciseThirteen();
+        break;
+      case 14:
+        runExerciseFourteen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
