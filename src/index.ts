@@ -207,6 +207,29 @@ function runExerciseEleven() {
   
 }
 
+function runExerciseTwelve() {
+  let input: number = Number(readLine("Enter a number smaller than 100: "))
+
+  for (let index = 1; index <= input; index++) {
+    console.log(chalk.blue(index));
+  }
+  for (let index = input; index > 0; index--) {
+    console.log(chalk.green(index));
+  }
+
+  let i: number = 1;
+  while (i <= input) {
+    console.log(chalk.blue(i));
+    i++;
+  }
+
+  let j: number = input;
+  do {
+    console.log(chalk.green(j));
+    j--;
+  } while (j > 0);
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -250,6 +273,9 @@ while (keepAlive) {
         break;
       case 11:
         runExerciseEleven();
+        break;
+      case 12:
+        runExerciseTwelve();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
