@@ -116,7 +116,48 @@ function runExerciseNine() {
   }
 }
 
-function runExerciseTen() {}
+function runExerciseTen() {
+  //A
+  let str = "The quick fox jumped over the DOG";
+  let newStr = str.replace("quick", "brown").replace("DOG", "lazy dog");
+  console.log(newStr);
+
+  //B
+  let firstWord = readLine("Enter a word: ").toLowerCase().trim();
+  let secondWord = readLine("Enter a word: ").toLowerCase().trim();
+
+  if (firstWord === secondWord) {
+    console.log("The words are the same");
+  } else {
+    console.log("The words are not the same");
+  }
+
+  //C
+  let word = readLine("Enter Donkey: ");
+  word = word.replace("D", "M");
+  console.log(word);
+
+  //D
+  let str2 = "I am going to visit Kolmården zoo tomorrow. I am a big fan of the dolphin show. I may watch all dolphin show during the day. I would like to take a gondola safari as well. I wish to visit Bamse and his team there.";
+  let arr = str2.split(" ")
+  let newArr = arr.map((word) => {
+    if (word == "I") {
+      return "We";
+    } else if(word == "am") {
+      return "are";
+    } else {
+      return word;
+    }
+  })
+  console.log(newArr.join(" "));
+  
+  //E
+  let str3 = "She is the popular singer";
+  let midPoint = str3.indexOf("popular");
+  console.log(str3.slice(0, midPoint));
+  
+  
+}
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
