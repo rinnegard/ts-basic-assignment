@@ -1,8 +1,6 @@
 // *** Ignore the following lines ***
 import chalk from "chalk";
-import { read } from "fs";
 import prompt from "prompt-sync";
-import { start } from "repl";
 // *** Ignore the above lines ***
 
 // Use the following function to read input from the user:
