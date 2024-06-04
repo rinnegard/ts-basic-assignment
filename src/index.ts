@@ -291,6 +291,23 @@ function runExerciseFifteen() {
   }
 }
 
+function runExerciseSixteen() {
+  console.log("Keep entering numbers until you enter 0");
+
+  let num: number = Number(readLine("Number:"))
+  let sum: number = num;
+  let count: number = 0;
+
+  while (num !== 0) {
+    num = Number(readLine("Number:"))
+    sum += num;
+    count++;
+  }
+
+  console.log(`Sum: ${sum}`);
+  console.log(`Average: ${sum / count}`);
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -346,6 +363,9 @@ while (keepAlive) {
         break;
       case 15:
         runExerciseFifteen();
+        break;
+      case 16:
+        runExerciseSixteen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
