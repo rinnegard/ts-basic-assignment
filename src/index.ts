@@ -246,8 +246,14 @@ function runExerciseThirteen() {
   }
 }
 
+interface MultiplicationTable {
+  [index: number]: {
+    [index: number]: number
+  }
+}
+
 function runExerciseFourteen() {
-  let multTable: any = {}; //TODO any -> object?
+  let multTable: MultiplicationTable = {};
   for (let i = 1; i <= 10; i++) {
     multTable[i] = {};
     for (let j = 1; j <= 10; j++) {
@@ -255,8 +261,6 @@ function runExerciseFourteen() {
     }
   }
 
-  // console.log(multTable);
-  
   console.table(multTable)
 }
 
@@ -306,6 +310,10 @@ function runExerciseSixteen() {
 
   console.log(`Sum: ${sum}`);
   console.log(`Average: ${sum / count}`);
+}
+
+function runExerciseSeventeen() {
+  
 }
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
@@ -366,6 +374,9 @@ while (keepAlive) {
         break;
       case 16:
         runExerciseSixteen();
+        break;
+      case 17:
+        runExerciseSeventeen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
