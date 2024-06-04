@@ -230,6 +230,23 @@ function runExerciseTwelve() {
   } while (j > 0);
 }
 
+function runExerciseThirteen() {
+  let secretNumber: number = Math.ceil(Math.random() * 10);
+
+  let keepGuessing: string = "";
+  while (keepGuessing !== "no") {
+    let guess: number = Number(readLine("Guess a number 1-10: "))
+    if (guess === secretNumber) {
+      console.log(chalk.green(`${guess} was correct!`));
+      break;
+    }
+    console.log(chalk.red(`${guess} was incorrect!`));
+
+    keepGuessing = readLine("Do you want to guess again? (yes/no): ");
+  }
+
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -276,6 +293,9 @@ while (keepAlive) {
         break;
       case 12:
         runExerciseTwelve();
+        break;
+      case 13:
+        runExerciseThirteen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
