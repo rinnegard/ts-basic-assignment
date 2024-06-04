@@ -184,6 +184,31 @@ function runExerciseTen() {
   console.log(res);
 }
 
+function runExerciseEleven() {
+  let operator: string = readLine("Enter an operator(+ - * /): ");
+  let num1: number = Number(readLine("Enter a number: "))
+  let num2: number = Number(readLine("Enter a number: "))
+
+  switch (operator) {
+    case "+":
+      console.log(num1 + num2);
+      break;
+    case "-":
+      console.log(num1 - num2);
+      break;
+    case "*":
+      console.log(num1 * num2);
+      break;
+    case "/":
+      console.log(num1 / num2);
+      break;
+    default:
+      console.log(chalk.red("Error"));
+      break;
+  }
+  
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -224,6 +249,9 @@ while (keepAlive) {
         break;
       case 10:
         runExerciseTen();
+        break;
+      case 11:
+        runExerciseEleven();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
