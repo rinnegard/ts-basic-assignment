@@ -103,7 +103,18 @@ function runExerciseEight() {
   }
 }
 
-function runExerciseNine() {}
+function runExerciseNine() {
+  let originalInput: string = readLine("Enter a palindrome: ");
+  let input = originalInput.trim().toLowerCase().replace(/\W/g, "");
+  let inputArray = input.split("");
+  let reverseInput = inputArray.reverse().join("");
+
+  if (reverseInput === input) {
+    console.log(chalk.green(`"${originalInput}" is a palindrome`));
+  } else {
+    console.log(chalk.red(`"${originalInput}" is not a palindrome`));
+  }
+}
 
 function runExerciseTen() {}
 
