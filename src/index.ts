@@ -260,6 +260,37 @@ function runExerciseFourteen() {
   console.table(multTable)
 }
 
+function runExerciseFifteen() {
+//    *********
+//     *******
+//      *****
+//       ***
+//        *
+  let line: string = "";
+  let starCount: number = 9;
+  let stars: string = "";
+  let spaceCount: number = 4;
+  let space: string = "";
+  for (let index = 0; index < 5; index++) {
+    line = "";
+    stars = "";
+    for (let index = starCount; index > 0; index--) {
+      stars += "*"
+    }
+    space = " ".repeat(spaceCount);
+    line = space + stars + space;
+    starCount = starCount - 2;
+    spaceCount++;
+
+    if (index % 2 === 0) {
+      console.log(chalk.yellow.bgBlue(line));
+    } else {
+      console.log(chalk.blue.bgYellow(line));
+    }
+
+  }
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -312,6 +343,9 @@ while (keepAlive) {
         break;
       case 14:
         runExerciseFourteen();
+        break;
+      case 15:
+        runExerciseFifteen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
