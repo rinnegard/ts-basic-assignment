@@ -313,7 +313,18 @@ function runExerciseSixteen() {
 }
 
 function runExerciseSeventeen() {
-  
+  let num = Number(readLine("How many fibonacci numbers? "))
+
+  let seq: number[] = [];
+
+  for (let index = 0; index < num; index++) {
+      if (seq.length > 1) {
+          seq.push(seq[index - 1] + seq[index-2]);
+      } else {
+          seq.push(index);
+      }
+  }
+  console.log(seq.toString());
 }
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
