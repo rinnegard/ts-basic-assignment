@@ -582,6 +582,37 @@ function runExerciseThirtyOne() {
   }
 }
 
+function runExerciseThirtyTwo() {
+  let today = new Date();
+  let tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+  let yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
+
+  console.log("Tomorrow:", tomorrow.toLocaleDateString());
+  console.log("Yesterday:", yesterday.toLocaleDateString());
+  console.log("Today:", today.toLocaleDateString());
+
+  let formatter = new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+    weekday: "long",
+    dayPeriod: "long"
+  })
+
+  console.log(formatter.format(today));
+
+  let svFormatter = new Intl.DateTimeFormat("sv-SV", {
+    month: "2-digit",
+    day: "2-digit",
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+
+  console.log(svFormatter.format(today));
+  
+}
+
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
@@ -683,6 +714,9 @@ while (keepAlive) {
         break;
       case 31:
         runExerciseThirtyOne();
+        break;
+      case 32:
+        runExerciseThirtyTwo();
         break;
   
 
