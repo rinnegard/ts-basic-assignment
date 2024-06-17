@@ -559,7 +559,6 @@ function runExerciseThirty() {
 
   let operator = readLine("square/cube? ");
   let newArr: number[] = [];
-  let res: number;
   if (operator === "square") {
     newArr = arr.map((num) => {
       return num ** 2;
@@ -572,6 +571,15 @@ function runExerciseThirty() {
 
   console.log(newArr.toString());
 
+}
+
+function runExerciseThirtyOne() {
+  let year = Number(readLine("Enter current year: "));
+  if (year === new Date().getFullYear()) {
+    console.log(chalk.green(`Correct, ${year} is the current year.`));
+  } else {
+    console.log(chalk.red(`Incorrect, ${year} is not the current year.`));
+  }
 }
 
 
@@ -673,7 +681,9 @@ while (keepAlive) {
       case 30:
         runExerciseThirty();
         break;
-    
+      case 31:
+        runExerciseThirtyOne();
+        break;
   
 
 
