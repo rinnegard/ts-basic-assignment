@@ -513,6 +513,31 @@ function runExerciseTwentyEight() {
   
 }
 
+function runExerciseTwentyNine() {
+  let arr: number[] = [];
+  let sizeMin: number = 5;
+  let sizeMax: number = 15;
+  let size: number = Math.ceil(Math.random() * (sizeMax - sizeMin)) + sizeMin
+  for (let index = 0; index < size; index++) {
+    arr.push(Math.ceil(Math.random() * 100));
+  }
+  console.log(arr.toString());
+
+
+  for (let index = 0; index < arr.length; index++) {
+    for (let index = 0; index < arr.length; index++) {
+      if (arr[index] > arr[index + 1]) { 
+        let temp = arr[index + 1];
+        arr[index + 1] = arr[index];
+        arr[index] = temp;
+      }
+    }
+  }
+
+  console.log(arr.toString());
+  
+}
+
 
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
@@ -607,6 +632,10 @@ while (keepAlive) {
       case 28:
         runExerciseTwentyEight();
         break;
+      case 29:
+        runExerciseTwentyNine();
+        break;
+    
   
 
 
