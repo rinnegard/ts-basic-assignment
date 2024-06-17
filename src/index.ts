@@ -409,6 +409,20 @@ function serveDrink() {
       }
 }
 
+function runExerciseTwentyThree() {
+  let arr = [5, 21, 7, 12, 9]
+  let max = findMax(arr);
+  console.log(max);
+  
+
+}
+
+function findMax(arr: number[]) {
+  return Math.max(...arr);
+}
+
+
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -483,6 +497,10 @@ while (keepAlive) {
       case 22:
         runExerciseTwentyTwo();
         break;
+      case 23:
+        runExerciseTwentyThree();
+        break;
+  
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
       case -1:
