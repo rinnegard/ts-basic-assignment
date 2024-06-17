@@ -1,5 +1,6 @@
 // *** Ignore the following lines ***
 import chalk from "chalk";
+import { log } from "console";
 import prompt from "prompt-sync";
 // *** Ignore the above lines ***
 
@@ -475,7 +476,7 @@ function runExerciseTwentySix() {
 
 function runExerciseTwentySeven() {
   let arr: number[] = []
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < 12; index++) {
     arr.push(Number(readLine("Enter a positive number: ")))
   }
 
@@ -489,6 +490,26 @@ function runExerciseTwentySeven() {
   console.log(arr.toLocaleString());
   console.log(odd.toLocaleString());
   console.log(even.toLocaleString());
+  
+}
+
+function runExerciseTwentyEight() {
+  let randArr: number[] = [];
+  let result: number[] = [];
+
+  for (let index = 0; index < 8; index++) {
+    randArr.push(Math.ceil(Math.random() * 10));
+  }
+
+  result = randArr.filter((num) => {
+    return num % 2 === 0;
+  }).concat(randArr.filter((num) => {
+    return num % 2 !== 0;
+  }))
+
+  console.log(randArr.toString());
+  
+  console.log(result.toString());
   
 }
 
@@ -582,6 +603,9 @@ while (keepAlive) {
         break;
       case 27:
         runExerciseTwentySeven();
+        break;
+      case 28:
+        runExerciseTwentyEight();
         break;
   
 
