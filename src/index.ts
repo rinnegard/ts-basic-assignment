@@ -375,38 +375,38 @@ function runExerciseTwentyTwo() {
     serveDrink()
   } else {
     let sodaAnswer: string = readLine("Do you want a soda? (yes/no): ");
-          switch (sodaAnswer) {
-            case "yes":
-              console.log("Soda is served");
-              break;
-            default:
-              console.log("No more options");
-              break;
-          }
+    switch (sodaAnswer) {
+      case "yes":
+        console.log("Soda is served");
+        break;
+      default:
+        console.log("No more options");
+        break;
+    }
   }
 }
 
 function serveDrink() {
   let beerAnswer: string = readLine("Do you want a beer? (yes/no): ");
-      switch (beerAnswer) {
+  switch (beerAnswer) {
+    case "yes":
+      console.log("Beer is served");
+      break;
+    case "no":
+      let sodaAnswer: string = readLine("Do you want a soda? (yes/no): ");
+      switch (sodaAnswer) {
         case "yes":
-          console.log("Beer is served");
-          break;
-        case "no":
-          let sodaAnswer: string = readLine("Do you want a soda? (yes/no): ");
-          switch (sodaAnswer) {
-            case "yes":
-              console.log("Soda is served");
-              break;
-            default:
-              console.log("No more options");
-              break;
-          }
+          console.log("Soda is served");
           break;
         default:
           console.log("No more options");
           break;
       }
+      break;
+    default:
+      console.log("No more options");
+      break;
+  }
 }
 
 function runExerciseTwentyThree() {
@@ -459,6 +459,17 @@ function runExerciseTwentyFive() {
   console.log("All:", totalArr.toString());
   console.log("Even:", evenArr.toString());
   console.log("Odd:", oddArr.toString());
+  
+}
+
+function runExerciseTwentySix() {
+  let arr: number[] = []
+  for (let index = 0; index < 10; index++) {
+    arr.push(Number(readLine("Enter a number: ")))
+  }
+  console.log(arr.filter((num) => {
+    return num < 0;
+  }));
   
 }
 
@@ -547,6 +558,10 @@ while (keepAlive) {
       case 25:
         runExerciseTwentyFive();
         break;
+      case 26:
+        runExerciseTwentySix();
+        break;
+  
 
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
