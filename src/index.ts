@@ -336,6 +336,24 @@ function runExercisenNineteen() {
   return area;
 }
 
+function runExerciseTwenty() {
+  let x = 20;
+  let y = 5;
+  console.log(x, y);
+  
+  function swap(a: number, b: number) {
+    let temp = a;
+    a = b;
+    b = temp;
+
+    return [a, b];
+  }
+
+  [x, y] = swap(x, y);
+  console.log(x, y);
+  
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -400,6 +418,9 @@ while (keepAlive) {
         break;
       case 19:
         runExercisenNineteen();
+        break;
+      case 20:
+        runExerciseTwenty();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
