@@ -473,6 +473,25 @@ function runExerciseTwentySix() {
   
 }
 
+function runExerciseTwentySeven() {
+  let arr: number[] = []
+  for (let index = 0; index < 5; index++) {
+    arr.push(Number(readLine("Enter a positive number: ")))
+  }
+
+  let odd = arr.filter((num) => {
+    return num % 2 !== 0;
+  })
+  let even = arr.filter((num) => {
+    return num % 2 === 0;
+  })
+
+  console.log(arr.toLocaleString());
+  console.log(odd.toLocaleString());
+  console.log(even.toLocaleString());
+  
+}
+
 
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
@@ -560,6 +579,9 @@ while (keepAlive) {
         break;
       case 26:
         runExerciseTwentySix();
+        break;
+      case 27:
+        runExerciseTwentySeven();
         break;
   
 
