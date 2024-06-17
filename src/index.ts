@@ -541,7 +541,37 @@ function runExerciseTwentyNine() {
 }
 
 function runExerciseThirty() {
-  
+  let arr: number[] = [];
+  let sizeMin: number = 5;
+  let sizeMax: number = 15;
+  let size: number = Math.ceil(Math.random() * (sizeMax - sizeMin)) + sizeMin
+  while (arr.length !== size) {
+    let randNum: number;
+
+    do {
+      randNum = Math.floor(Math.random() * 20);
+    } while (arr.includes(randNum));
+
+    arr.push(randNum);
+  }
+
+  console.log(arr.sort((a: number, b: number) => a - b ).toString());
+
+  let operator = readLine("square/cube? ");
+  let newArr: number[] = [];
+  let res: number;
+  if (operator === "square") {
+    newArr = arr.map((num) => {
+      return num ** 2;
+    })
+  } else if (operator === "cube") {
+    newArr = arr.map((num) => {
+      return num ** 3;
+    })
+  }
+
+  console.log(newArr.toString());
+
 }
 
 
@@ -639,6 +669,9 @@ while (keepAlive) {
         break;
       case 29:
         runExerciseTwentyNine();
+        break;
+      case 30:
+        runExerciseThirty();
         break;
     
   
