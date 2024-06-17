@@ -420,6 +420,29 @@ function runExerciseTwentyThree() {
 function findMax(arr: number[]) {
   return Math.max(...arr);
 }
+function findMin(arr: number[]) {
+  return Math.min(...arr);
+}
+
+function runExerciseTwentyFour() {
+  const input: string = readLine("Enter a string of numbers: (2,7,1,20,13): ");
+  const inputArr: number[] = input.split(",").map((element) => {
+    return Number(element)
+  });
+  const max = findMax(inputArr);
+  const min = findMin(inputArr);
+
+  const sum = inputArr.reduce((total, num) => {
+    return total + num;
+  }, 0)
+
+  let average = sum / inputArr.length;
+
+  console.log(max);
+  console.log(min);
+  console.log(average);
+  
+}
 
 
 
@@ -499,6 +522,9 @@ while (keepAlive) {
         break;
       case 23:
         runExerciseTwentyThree();
+        break;
+      case 24:
+        runExerciseTwentyFour();
         break;
   
 
