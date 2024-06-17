@@ -351,7 +351,20 @@ function runExerciseTwenty() {
 
   [x, y] = swap(x, y);
   console.log(x, y);
+}
+
+function runExerciseTwentyOne() {
+  const birthdate: Date = new Date(readLine("Enter bithday: "))
+  const today: Date = new Date();
+  let diff: number = today.getFullYear() - birthdate.getFullYear();
   
+  if (today.getDate() < birthdate.getDate() && today.getMonth() <= birthdate.getMonth()) {
+    diff--;
+  }
+
+  console.log(diff);
+  return diff;
+
 }
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
@@ -421,6 +434,9 @@ while (keepAlive) {
         break;
       case 20:
         runExerciseTwenty();
+        break;
+      case 21:
+        runExerciseTwentyOne();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
