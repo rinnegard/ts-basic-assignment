@@ -622,7 +622,16 @@ function runExerciseThirtyThree() {
     console.log("Future year");
   } else {
     console.log("Current year");
-    
+  }
+}
+
+function runExerciseThirtyFour() {
+  let year = 1990;
+  while (year <= new Date().getFullYear()) {
+    if (year % 4 === 0) {
+      console.log(year);
+    }
+    year++;
   }
 }
 
@@ -733,6 +742,9 @@ while (keepAlive) {
         break;
       case 33:
         runExerciseThirtyThree();
+        break;
+      case 34:
+        runExerciseThirtyFour();
         break;
 
 
