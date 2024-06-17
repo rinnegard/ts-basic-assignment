@@ -436,11 +436,29 @@ function runExerciseTwentyFour() {
     return total + num;
   }, 0)
 
-  let average = sum / inputArr.length;
+  const average = sum / inputArr.length;
 
   console.log(max);
   console.log(min);
   console.log(average);
+}
+
+function runExerciseTwentyFive() {
+  let totalArr: number[] = [];
+  let oddArr: number[] = [];
+  let evenArr: number[] = [];
+  for (let index = 0; index < 20; index++) {
+    let rand = Math.ceil(Math.random() * 10);
+    totalArr.push(rand);
+    if (rand % 2 === 0) {
+      evenArr.push(rand);
+    } else {
+      oddArr.push(rand);
+    }
+  }
+  console.log("All:", totalArr.toString());
+  console.log("Even:", evenArr.toString());
+  console.log("Odd:", oddArr.toString());
   
 }
 
@@ -526,7 +544,10 @@ while (keepAlive) {
       case 24:
         runExerciseTwentyFour();
         break;
-  
+      case 25:
+        runExerciseTwentyFive();
+        break;
+
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
       case -1:
