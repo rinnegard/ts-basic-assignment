@@ -613,6 +613,19 @@ function runExerciseThirtyTwo() {
   
 }
 
+function runExerciseThirtyThree() {
+  let date = new Date(readLine("Enter a date: "));
+  let today = new Date();
+  if (date.getFullYear() < today.getFullYear()) {
+    console.log("Past year");
+  } else if (date.getFullYear() > today.getFullYear()) {
+    console.log("Future year");
+  } else {
+    console.log("Current year");
+    
+  }
+}
+
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
@@ -718,7 +731,10 @@ while (keepAlive) {
       case 32:
         runExerciseThirtyTwo();
         break;
-  
+      case 33:
+        runExerciseThirtyThree();
+        break;
+
 
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
