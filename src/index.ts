@@ -523,21 +523,26 @@ function runExerciseTwentyNine() {
   }
   console.log(arr.toString());
 
-
-  for (let index = 0; index < arr.length; index++) {
+  let sorted: boolean = false;
+  do {
+    sorted = false;
     for (let index = 0; index < arr.length; index++) {
       if (arr[index] > arr[index + 1]) { 
         let temp = arr[index + 1];
         arr[index + 1] = arr[index];
         arr[index] = temp;
+        sorted = true;
       }
     }
-  }
+  } while (sorted);
 
   console.log(arr.toString());
   
 }
 
+function runExerciseThirty() {
+  
+}
 
 
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
