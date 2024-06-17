@@ -367,6 +367,48 @@ function runExerciseTwentyOne() {
 
 }
 
+function runExerciseTwentyTwo() {
+  const name = readLine("Enter Name: ");
+  console.log(`Hello ${name}!`);
+  const age = runExerciseTwentyOne();
+  if (age > 18) {
+    serveDrink()
+  } else {
+    let sodaAnswer: string = readLine("Do you want a soda? (yes/no): ");
+          switch (sodaAnswer) {
+            case "yes":
+              console.log("Soda is served");
+              break;
+            default:
+              console.log("No more options");
+              break;
+          }
+  }
+}
+
+function serveDrink() {
+  let beerAnswer: string = readLine("Do you want a beer? (yes/no): ");
+      switch (beerAnswer) {
+        case "yes":
+          console.log("Beer is served");
+          break;
+        case "no":
+          let sodaAnswer: string = readLine("Do you want a soda? (yes/no): ");
+          switch (sodaAnswer) {
+            case "yes":
+              console.log("Soda is served");
+              break;
+            default:
+              console.log("No more options");
+              break;
+          }
+          break;
+        default:
+          console.log("No more options");
+          break;
+      }
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -437,6 +479,9 @@ while (keepAlive) {
         break;
       case 21:
         runExerciseTwentyOne();
+        break;
+      case 22:
+        runExerciseTwentyTwo();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
