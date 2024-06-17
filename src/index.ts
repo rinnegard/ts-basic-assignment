@@ -327,6 +327,15 @@ function runExerciseSeventeen() {
   console.log(seq.toString());
 }
 
+function runExercisenNineteen() {
+  console.log("--Calculate triangle area--");
+  const height: number = Number(readLine("Enter height: "));
+  const width: number = Number(readLine("Enter width: "));
+  const area = height * width / 2;
+  console.log(`Area: ${area}`);
+  return area;
+}
+
 /* ^^^^^^^^^^^^  Add the rest of the exercise functions above this line ^^^^^^^^^^^^ */
 
 let keepAlive = true;
@@ -388,6 +397,9 @@ while (keepAlive) {
         break;
       case 17:
         runExerciseSeventeen();
+        break;
+      case 19:
+        runExercisenNineteen();
         break;
 
       /* ^^^^^^^^^^^^  Add the rest of the exercises above this line ^^^^^^^^^^^^ */
